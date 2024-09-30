@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary: #3a3a3a;
+  --primary-dark: #302d2d;
+  --green: #008104;
+  --red: #ff0000;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: var(--primary-dark);
+}
+
+/* CONTAINER */
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* BOX */
+.box {
+  height: 700px;
+  width: 450px;
+  padding: 20px;
+  background-color: var(--primary);
+  color: white;
+  position: absolute;
+}
+
+/* box-upper */
+.box-upper,
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.balance {
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 32px;
+}
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* transaction-container */
+.transaction-container {
+  margin-top: 20px;
+}
+/* transactions */
+.transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.transaction {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+}
+/* content */
+.content {
+  display: flex;
+  cursor: pointer;
+}
+.content .left {
+  display: flex;
+  padding: 7px;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+.left p {
+  font-size: 14px;
+}
+
+.status {
+  display: grid;
+  place-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: var(--green);
+  color: white;
+}
+/* lower */
+.lower {
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  display: none;
+}
+.lower img {
+  height: 20px;
+}
+.showTransaction {
+  display: flex;
+}
+
+/* CREDIT DEBIT */
+.credit {
+  background-color: var(--green);
+}
+.debit {
+  background-color: var(--red);
+}
+/* transaction-form */
+.transaction-form {
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.transaction-form h3 {
+  margin-bottom: 10px;
+}
+/* form control */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form-control:first-child {
+  flex: 2;
+}
+/* inputs */
+.inputs {
+  display: flex;
+  gap: 10px;
+}
+form input:focus-visible {
+  outline: 1px solid var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+form input {
+  padding: 10px 15px;
+  border: 1px solid black;
+}
+
+/* button container */
+.button-container {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+.button-container button:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.button-container button {
+  cursor: pointer;
+  height: 45px;
+  width: 100%;
+  color: white;
+  border: none;
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
+}
+#earnBtn {
+  background-color: var(--green);
+}
+#expBtn {
+  background-color: var(--red);
+}
+
+/* responsive */
+@media (max-width: 1400px) {
+  .box {
+    height: 95%;
+  }
+}
+@media (max-width: 550px) {
+  .box {
+    width: 90%;
+    height: 90%;
+  }
+  form input {
+    width: 100%;
+  }
+}
+@media (max-width: 350px) {
+  .box-upper h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 275px) {
+  .box-upper h1 {
+    font-size: 20px;
+  }
+}
